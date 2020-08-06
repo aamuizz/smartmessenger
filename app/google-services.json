@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "194069729502",
+    "firebase_url": "https://smart-messenger-efcf0.firebaseio.com",
+    "project_id": "smart-messenger-efcf0",
+    "storage_bucket": "smart-messenger-efcf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194069729502:android:c9204c742e8d9973c4f24f",
+        "android_client_info": {
+          "package_name": "com.amtechnology.smartreplyassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194069729502-29fg0t7plhn9pdbdusrrnruhu3143433.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5JP0N3UXcrt35bSoZnKasCVyzp4NUf5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194069729502-29fg0t7plhn9pdbdusrrnruhu3143433.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

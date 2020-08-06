@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">smartreplyassistant</string>
+    <string name="login_toptext">We will send you an SMS to Verify your phone number. Enter your country code and phone number</string>
+</resources>
