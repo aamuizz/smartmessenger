@@ -1,4 +1,4 @@
-package com.amtechnology.smartreplyassistant;
+package com.amtechnology.smartreplyassistant.ChatActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -9,20 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.amtechnology.smartreplyassistant.AllContacts.Contact;
+import com.amtechnology.smartreplyassistant.AllContacts.Contact_Message_Adapter;
+import com.amtechnology.smartreplyassistant.R;
+import com.amtechnology.smartreplyassistant.Database.replystore;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.stfalcon.chatkit.messages.MessageInput;
-import com.stfalcon.chatkit.messages.MessagesList;
-import com.stfalcon.chatkit.messages.MessagesListAdapter;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -44,16 +42,18 @@ public class MainActivity extends AppCompatActivity {
         userreplies_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),replystore.class);
+                Intent intent = new Intent(v.getContext(), replystore.class);
                 startActivity(intent);
             }
         });
-        user_uid = "7Mu9cFd5l4cuUWBFeQoxluPTEb33";
+        user_uid = "Vb3ovYnu2lYay5gqV3bHxqi4rLK2"; /// bundle
+//        user_uid = bundle.getString("uid");
+//        Setting up the Recycler View
         mRecyclerview = findViewById(R.id.allcontacts_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
         mRecyclerview.setLayoutManager(linearLayoutManager);
         mRecyclerview.setHasFixedSize(true);
-
+//Getting all users from the database
         final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

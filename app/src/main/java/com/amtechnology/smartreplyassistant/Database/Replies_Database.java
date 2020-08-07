@@ -1,4 +1,4 @@
-package com.amtechnology.smartreplyassistant;
+package com.amtechnology.smartreplyassistant.Database;
 
 import android.content.ContentValues;
 import android.content.Context;

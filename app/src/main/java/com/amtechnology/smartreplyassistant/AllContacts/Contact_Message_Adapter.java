@@ -1,4 +1,4 @@
-package com.amtechnology.smartreplyassistant;
+package com.amtechnology.smartreplyassistant.AllContacts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.amtechnology.smartreplyassistant.ChatActivity.ChatActivity;
+import com.amtechnology.smartreplyassistant.R;
 
 import java.util.ArrayList;
 
@@ -29,12 +32,14 @@ public class Contact_Message_Adapter extends RecyclerView.Adapter<Contact_Messag
 
     @Override
     public void onBindViewHolder(@NonNull Contact_Message_ViewHolder holder, final int position) {
+
+//       It will show all the users
         holder.name.setText(allcontacts.get(position).getName());
         holder.phone_no.setText(allcontacts.get(position).getPhoneno());
         holder.contact_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mcontext,ChatActivity.class);
+                Intent intent = new Intent(mcontext, ChatActivity.class);
                 intent.putExtra("uid", allcontacts.get(position).getUid());
                 intent.putExtra("name",allcontacts.get(position).getName());
                 intent.putExtra("phoneno",allcontacts.get(position).getPhoneno());

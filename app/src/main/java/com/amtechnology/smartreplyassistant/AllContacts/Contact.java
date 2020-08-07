@@ -1,5 +1,6 @@
-package com.amtechnology.smartreplyassistant;
+package com.amtechnology.smartreplyassistant.AllContacts;
 
+//POJO class for All Contacts Display
 public class Contact {
     String name;
     String uid;

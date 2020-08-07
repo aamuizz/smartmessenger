@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
+    tools:context=".Login.login"
     android:orientation="vertical"
     android:layout_marginTop="100dp">
     <TextView
@@ -26,7 +26,7 @@
         android:hint="Your Name"
         />
     <EditText
-        android:id="@+id/phone_no"
+        android:id="@+id/phone_no_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/iconmain"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".replystore"></activity>
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".Verify_phone" /> <!-- <activity android:name=".MainActivity" /> -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".Database.replystore"></activity>
+        <activity android:name=".ChatActivity.ChatActivity" />
+        <activity android:name=".Login.Verify_phone" />
+<!--         <activity android:name=".ChatActivity.MainActivity" />-->
+        <activity android:name=".ChatActivity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

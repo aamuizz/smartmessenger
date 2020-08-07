@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+//POJO class for Messenger View
 public class Messages implements IMessage {
     private String id,text;
     private String created_at;

@@ -1,9 +1,8 @@
-package com.amtechnology.smartreplyassistant;
+package com.amtechnology.smartreplyassistant.Login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amtechnology.smartreplyassistant.ChatActivity.MainActivity;
+import com.amtechnology.smartreplyassistant.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
@@ -42,9 +43,10 @@ public class Verify_phone extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_verify_phone);
+        setContentView(R.layout.toolbar_verification_code);
         toolbar_verify = findViewById(R.id.toolbar_verify_text);
         waiting_text = findViewById(R.id.waiting_text);
+
 
         mAuth = FirebaseAuth.getInstance();
         verify_code = findViewById(R.id.verify_Code);
@@ -63,8 +65,10 @@ public class Verify_phone extends AppCompatActivity {
                 verifyVerificationCode(code);
             }
         });
+
         Bundle bundle = getIntent().getExtras();
         String phone_no = bundle.getString("phoneno");
+        //        Sending Verification code to the phone no
         sendVerificationCode(phone_no);
         toolbar_verify.setText("Verify "+phone_no);
         waiting_text.setText("Waiting to Automatically Detect an Sms to "+phone_no);
@@ -126,6 +130,7 @@ public class Verify_phone extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             //verification successful we will start the profile activity
 
+//                            Saving the user details in database
                             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
                             FirebaseUser current_user = FirebaseAuth.getInstance().getCurrentUser();
                             final String uid=current_user.getUid();

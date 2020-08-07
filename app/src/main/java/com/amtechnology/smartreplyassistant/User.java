@@ -2,6 +2,7 @@ package com.amtechnology.smartreplyassistant;
 
 import com.stfalcon.chatkit.commons.models.IUser;
 
+//POJO user class for messenger
 public class User implements IUser {
     private String id,name,avatar;
 
